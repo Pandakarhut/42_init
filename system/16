@@ -1,0 +1,7 @@
+# 16. Find the service which makes it possible to run specific tasks following a regular schedule
+cron
+
+# The cron service lets you choose what commands are automatically run at which times of the day, or on which days.
+# A plain cron installation in Debian runs the daily cron job at 06:25, the weekly ones at 06:47 and the monthly ones at 06:52.
+# The crons are stored in /etc/cron.daily /etc/cron.monthly etc.
+# There is also /etc/crontab where you can define days, hours and minutes you want to run specific commands.

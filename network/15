@@ -1,0 +1,8 @@
+# 15. Make the intra.42.fr address reroute to 46.19.122.85
+
+# The DNS entries in /etc/hosts are always evaluated first.
+# If we add intra.42.fr and 46.19.122.85 there, the computer will always connect to 46.19.112.85 when trying to get to intra.42.fr
+# We can use vim to append one more line to /etc/hosts:
+# sudo vim /etc/hosts
+# Then add line: 46.19.122.85 intra.42.fr
+# And save file

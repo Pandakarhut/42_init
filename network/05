@@ -1,0 +1,7 @@
+# 5. Identify the IP address of the DNS that responds to the following url: who.int
+
+# nslookup uses nameserver to figure out info of who.int
+# grep "Address" only gets lines which have "Address" on them
+# tail -1 only gets the last line (because there are two address lines, first is the nameserver and second is the who.int server IP)
+# awk prints only the second word on the line
+nslookup who.int | grep "Address" | tail -1 | awk '{print $2}'

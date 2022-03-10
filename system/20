@@ -1,0 +1,6 @@
+# 20. List all existing users on the VM
+
+# cut is a program that cuts a part of the input (/etc/passwd) and prints the result.
+# -f1 means print the first slice and -d: means use ":" as the delimeter for slices.
+# Therefore cut will return the text before the first ":" for every line on the /etc/passwd file.
+cut -f1 -d: /etc/passwd

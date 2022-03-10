@@ -1,0 +1,7 @@
+# 14. Run the ‘tail -f /var/log/syslog‘ command in background
+sudo tail -f /var/log/syslog &
+
+# tail follows a file and prints everything in real time. The & ampersand at the end of command means running it in the background.
+# It will print something to the terminal every time something is added to the system log. You can still write commands on the terminal as well.
+# It means you can CTRL+C away from the process and it will stay running in the background.
+# You can use 'jobs -l' or 'ps aux' command to see background processes.

@@ -1,0 +1,4 @@
+# 22. Find the command that add a new local user
+
+# To add a new user, replace USERNAME with wanted username. All home folders and such will automatically be created with this command.
+sudo adduser USERNAME

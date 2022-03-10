@@ -1,0 +1,4 @@
+# 15. Find the command that kills the background command’s process
+sudo pkill tail
+
+# It will kill all background processes that are using the tail program

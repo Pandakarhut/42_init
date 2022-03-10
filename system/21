@@ -1,0 +1,6 @@
+# 21. List all real users on the VM
+
+# We first use cat to get all the contents of /etc/passwd
+# We then use grep to only get the lines with "/home/" on them. Only real users have a home directory.
+# Finally, we again cut the lines using ":" as the delimeter and getting the first slice with -f1.
+cat /etc/passwd | grep "/home/" | cut -f1 -d:

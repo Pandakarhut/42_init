@@ -1,0 +1,4 @@
+# 3. Identify the MAC address of the Wi-Fi card
+
+# ifconfig en1 prints en1 interface info. grep gets the line with "ether" on it and awk prints the second word on the line, which is the MAC address
+ifconfig en1 | grep ether | awk '{print $2}'

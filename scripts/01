@@ -1,0 +1,6 @@
+# 1. Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
+# cut -f1,3,6 gets the indexes 1, 3 and 6 of the line when the line is split with the character ":" due to -d:
+# The file given is /etc/passwd.
+# After cutting the three specific parts, we use sed to replace the ":" characters with " " space characters.
+# Then whatever sed gives out, we finally put to nice columns using "column -t" command that takes sed output as an input.
+cut -f1,3,6 -d: /etc/passwd | sed "s/:/ /g" | column -t

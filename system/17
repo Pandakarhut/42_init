@@ -1,0 +1,5 @@
+# 17. Find the command that allows you to connect via ssh on the VM. (In parallel with the graphic session)
+ssh -X user@host
+
+# If the VM is running with an IP 192.168.1.15 (for example) and there is a user "john" created on the debian VM, then user@host is john@192.168.1.15
+# The server would ask for the users password then, before letting him login.

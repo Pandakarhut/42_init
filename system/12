@@ -1,0 +1,8 @@
+# 12. Figure out the exact size of each folder of /var in a humanly understandable way followed by the path of it.
+
+sudo du -sh /var/*
+
+# du shows the disk usage of every folder in /var.
+# the s parameter sums the disk usage of every subfolder.
+# the h parameter shows the disk usage in a human readable form
+# the parameters can be joined together as -sh

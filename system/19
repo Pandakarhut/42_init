@@ -1,0 +1,4 @@
+# 19. List all services which are started at boot time and name this kind of services
+
+# These type of services are called daemon services. They run in the background doing all kinds of tasks unattended.
+sudo service --status-all

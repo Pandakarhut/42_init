@@ -1,0 +1,4 @@
+# 12. Find the IP that was assigned to you by dhcp server
+
+# Ifconfig en0 shows network interface, grep inet gets the line with inet and awk prints second word on that line
+ifconfig en0 | grep "inet " | awk '{print $2}'

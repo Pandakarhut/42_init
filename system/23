@@ -1,0 +1,11 @@
+# 23. Explain how connect yourself as new user. (With graphic session and ssh session)
+
+# 1. First we create a new user called newuser:
+# sudo adduser newuser
+# 2. Then we get the ip address of the virtual machine debian:
+# ip route get 1 | awk '{print $7}'
+# 3. Then, we install the SSH server:
+# sudo apt update && sudo apt upgrade && sudo apt-get install openssh-server
+# 4. Then, on another computer, we connect:
+# ssh-session: ssh newuser@ip-address
+# graphic session: ssh -X newuser@ip-address (the -X means enabling X11 forwarding. X11 is a remote display protocol so clients connecting to the server can actually run and see graphical programs on the server.)
