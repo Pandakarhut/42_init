@@ -4,3 +4,5 @@
 ifconfig en0 | grep "inet " | awk '{print $2}' | xargs dig -x
 
 # That should print some info. The host is under the AUTHORITY SECTION
+;; AUTHORITY SECTION:
+10.in-addr.arpa.        900     IN      NS      dhcp-ns1.hive.fi.
