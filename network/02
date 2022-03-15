@@ -2,10 +2,10 @@
 
 # Run ifconfig, get only line with "broadcast", get sixth word on line.
 echo "a) Identify broadcast address"
-ifconfig en0 | grep "broadcast" | awk '{print $6}'
+ifconfig en0 | grep "broadcast" | awk '{print $NF}'
 
 echo "b) Identify all IP adresses which are part of the same subnet"
 #The netmask on the same line tells us the size of the subnet. 0xffffff00 means 255.255.255.0
 #That means there are 256 addresses in the subnet: x.x.x.0 to x.x.x.255
-# If subnet mask is 0xffff0000 then it means 255.255.0.0, which would mean there are 256*256 = 65546 addresses from x.x.0.0 to x.x.255.255.
+# If subnet mask is 0xffff0000 then it means 255.255.0.0, which would mean there are 256*256 = 65536 addresses from x.x.0.0 to x.x.255.255.
 ifconfig | grep "broadcast" | awk '{print "Mask " $4}'

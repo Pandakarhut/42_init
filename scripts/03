@@ -1,1 +1,27 @@
 # 3. Three’s a Charm. Write a script of you choice.
+
+#image: debian-live-11.2.0-amd64-standard.iso (957MB)
+
+# 1. become root user
+sudo -i
+
+# 2. install ssh server
+apt -y update
+apt -y upgrade
+apt-get install -y openssh-server
+
+# 3. start ssh server
+service ssh start
+
+# 4. create new user
+# -m = make home folder
+# -p = password
+# -s /bin/bash = default shell bash
+useradd -m -p 123 -s /bin/bash jtian
+
+# 5. Add user to sudoers
+echo "jtian   ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
+# []run in mac terminal: ssh user@address -p 2222
+# []service ssh status
+
