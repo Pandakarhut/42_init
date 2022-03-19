@@ -1,7 +1,8 @@
 # 2. Write a script which delete an ACTIVE user on the VM.
 
 # First we assume a user called newuser was added to the VM with "sudo adduser newuser"
-# Then with this script we delete the user.
+# Then we assume the user has some processes running.
+# Then with this script we terminate the processes and delete the user.
 echo "Listing current users:"
 cat /etc/passwd | grep /home/ | cut -f1 -d:
 echo "Killing all processes currently run by newuser..."

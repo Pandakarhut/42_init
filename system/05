@@ -2,9 +2,11 @@
 
 # First need to update apt packages
 # Then need to upgrade installed apt packages
-# Then ened to install the SSH server. After it's running we can run "sudo service ssh status" to see the SSH service state.
+# Then need to install the SSH server. After it's running we can run "sudo service ssh status" to see the SSH service state.
 
-# sudo apt update
-# sudo apt upgrade
-# sudo apt-get install openssh-server
+# sudo apt -y update
+# sudo apt -y upgrade
+# sudo apt-get -y install openssh-server
+# to start the service: service ssh start
+# restart/stop
 sudo service ssh status

@@ -3,6 +3,6 @@
 # If we add a reverse dns lookup to the end of the last command we get:
 ifconfig en0 | grep "inet " | awk '{print $2}' | xargs dig -x
 
-# That should print some info. The host is under the AUTHORITY SECTION
+# The host is under the AUTHORITY SECTION in the printed info
 ;; AUTHORITY SECTION:
 10.in-addr.arpa.        900     IN      NS      dhcp-ns1.hive.fi.

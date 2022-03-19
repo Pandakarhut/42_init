@@ -1,2 +1,6 @@
 # 7. Figure out the PID of the SSHD service.
-cat /var/run/sshd.pid
+# SSHD = ssh daemon
+
+# 2 options
+1. cat /var/run/sshd.pid
+2. service ssh status | grep 'Main PID' | awk '{print $3}'

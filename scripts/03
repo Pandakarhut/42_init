@@ -1,6 +1,6 @@
 # 3. Three’s a Charm. Write a script of you choice.
 
-#image: debian-live-11.2.0-amd64-standard.iso (957MB)
+# This script will
 
 # 1. become root user
 sudo -i
@@ -14,14 +14,14 @@ apt-get install -y openssh-server
 service ssh start
 
 # 4. create new user
-# -m = make home folder
-# -p = password
-# -s /bin/bash = default shell bash
-useradd -m -p 123 -s /bin/bash jtian
+adduser jtian
 
 # 5. Add user to sudoers
 echo "jtian   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
-# []run in mac terminal: ssh user@address -p 2222
-# []service ssh status
+# 6. finish message
+echo "SSH server has now been installed and activated. Use user jtian to login from another computer."
+
+# As long as host port 2222 is forwarded to guest port, SSH connection should now work
+# run in mac terminal: ssh jtian@127.0.0.1 -p 2222
 
