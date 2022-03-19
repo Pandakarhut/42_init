@@ -1,10 +1,3 @@
 # 8. Find the provider of who.int
 
-# We can use "whois who.int" to see information about the who.int domain.
-# We can then grep the related nameservers to know who is the domain provider
-echo "Nameservers:"
-whois who.int | grep nserver
-
-# If we do another whois on the nameserver we get the information of the provider
-echo "Provider:"
-whois EXT-DNS-2.CERN.CH | grep organisation | head -1
+Cloudflare
