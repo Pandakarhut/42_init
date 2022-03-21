@@ -5,7 +5,7 @@ echo "======USEFUL COMMANDS======
 2-ipconfig -l    list network interfaces
 3-pwd            show current folder path
 4-uptime         show how long the computer has been running
-5-exit"
+0-exit"
 while :
 do
 #input
@@ -22,8 +22,8 @@ do
  then
  continue
  fi
-#if menu number > 5
- if [ "$n" -gt 5 ]
+#if menu number > 4
+ if [ "$n" -gt 4 ]
  then
  continue
  fi
@@ -42,7 +42,7 @@ case $n in
  4)
  uptime
  ;;
- 5)
+ 0)
  break
  ;;
 esac
