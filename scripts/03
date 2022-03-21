@@ -4,7 +4,7 @@
 # This script will
 
 # 1. become root user
-sudo -i
+#sudo -i
 
 # 2. install ssh server
 apt -y update
