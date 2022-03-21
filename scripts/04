@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "======USEFUL COMMANDS======
-1-top\tshow running processes
-2-ipconfig -l\tlist network interfaces
-3-pwd\tshow current folder path
-4-uptime\tshow how long the computer has been running
+1-top            show running processes
+2-ipconfig -l    list network interfaces
+3-pwd            show current folder path
+4-uptime         show how long the computer has been running
 5-exit"
 while :
 do
