@@ -2,7 +2,7 @@
 
 echo "======USEFUL COMMANDS======
 1-top            show running processes
-2-ipconfig -l    list network interfaces
+2-df             show used and available disk space in filesystems
 3-pwd            show current folder path
 4-uptime         show how long the computer has been running
 0-exit"
