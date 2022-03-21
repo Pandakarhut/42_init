@@ -34,7 +34,7 @@ case $n in
  top
  ;;
  2)
- ipconfig -l
+ df -H
  ;;
  3)
  pwd
