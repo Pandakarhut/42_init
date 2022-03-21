@@ -1,16 +1,15 @@
 #!/bin/bash
 
-echo "*****COMMAND MENU******
-1-date
-2-ls
-3-who
-4-pwd
-0-exit
-"
+echo "======USEFUL COMMANDS======
+1-top\tshow running processes
+2-ipconfig -l\tlist network interfaces
+3-pwd\tshow current folder path
+4-uptime\tshow how long the computer has been running
+5-exit"
 while :
 do
 #input
- read -p "please input MENU number [0-4]:" n
+ read -p "Input MENU number [1-5]:" n
 #delete all numbers
  n1=`echo $n|sed s'/[0-9]//'g`
 #if empty
@@ -23,7 +22,7 @@ do
  then
  continue
  fi
-#if menu number > 4
+#if menu number > 5
  if [ "$n" -gt 4 ]
  then
  continue
@@ -32,16 +31,16 @@ do
 done
 case $n in
  1)
- date
+ top
  ;;
  2)
- ls
+ ipconfig -l
  ;;
  3)
- who
+ pwd
  ;;
  4)
- pwd
+ uptime
  ;;
  0)
  break

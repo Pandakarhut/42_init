@@ -1,4 +1,7 @@
+# 2. Write a script which delete an ACTIVE user on the VM.
+
 #!/bin/bash
+
 echo "List all users on the VM: "
 cat /etc/passwd | grep "/home/" | cut -f1 -d:
 
@@ -7,7 +10,7 @@ read user
 
 user_exists=`cat /etc/passwd | grep $user`
 if [ -z "$user_exists" ]; then
-	echo "User does not exist"
+	echo "User does not exist."
 else
 	if [ "$(pgrep -u $user)" != "$NULL" ]; then
 		sudo kill -9 $(pgrep -u $user)
@@ -15,17 +18,3 @@ else
 	sudo userdel -r $user
 	echo "User deleted"
 fi
-
-# 2. Write a script which delete an ACTIVE user on the VM.
-
-# First we assume a user called newuser was added to the VM with "sudo adduser newuser"
-# Then we assume the user has some processes running.
-# Then with this script we terminate the processes and delete the user.
-# echo "Listing current users:"
-# cat /etc/passwd | grep /home/ | cut -f1 -d:
-# echo "Killing all processes currently run by newuser..."
-# sudo pkill -u newuser
-# echo "Deleting the user newuser"
-# sudo userdel newuser
-# echo "Listing users after deletion:"
-# cat /etc/passwd | grep /home/ | cut -f1 -d:
