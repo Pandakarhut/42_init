@@ -1,4 +1,4 @@
 # 2. What command can you use to rename your system?
-hostname some-new-name
+sudo hostname some-new-name
 
 # The hostname command renames the system
