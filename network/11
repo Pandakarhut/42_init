@@ -2,4 +2,4 @@
 # of the device that makes the link between you (local network) and the outside world
 
 Depends on the network.
-At school: nat (10.60.1.1)
+nat (10.60.1.1)
