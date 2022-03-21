@@ -1,28 +1,48 @@
 #!/bin/bash
-# 3. Three’s a Charm. Write a script of you choice.
 
-# This script will
-
-# 1. become root user
-#sudo -i
-
-# 2. install ssh server
-apt -y update
-apt -y upgrade
-apt-get install -y openssh-server
-
-# 3. start ssh server
-service ssh start
-
-# 4. create new user
-adduser jtian
-
-# 5. Add user to sudoers
-echo "jtian   ALL=(ALL:ALL) ALL" >> /etc/sudoers
-
-# 6. finish message
-echo "SSH server has now been installed and activated. Use user jtian to login from another computer."
-
-# As long as host port 2222 is forwarded to guest port, SSH connection should now work
-# run in mac terminal: ssh jtian@127.0.0.1 -p 2222
-
+echo "======USEFUL COMMANDS======
+1-top            show running processes
+2-df             show used and available disk space in filesystems
+3-pwd            show current folder path
+4-uptime         show how long the computer has been running
+0-exit"
+while :
+do
+#input
+ read -p "Input MENU number [0-4]:" n
+#delete all numbers
+ n1=`echo $n|sed s'/[0-9]//'g`
+#if empty
+ if [ -z "$n" ]
+ then
+ continue
+ fi
+#if not a number
+ if [ -n "$n1" ]
+ then
+ continue
+ fi
+#if menu number > 4
+ if [ "$n" -gt 4 ]
+ then
+ continue
+ fi
+ break
+done
+case $n in
+ 1)
+ top
+ ;;
+ 2)
+ df -H
+ ;;
+ 3)
+ pwd
+ ;;
+ 4)
+ uptime
+ ;;
+ 0)
+ exit
+ ;;
+esac
