@@ -23,7 +23,7 @@ do
  continue
  fi
 #if menu number > 5
- if [ "$n" -gt 4 ]
+ if [ "$n" -gt 5 ]
  then
  continue
  fi
@@ -42,7 +42,7 @@ case $n in
  4)
  uptime
  ;;
- 0)
+ 5)
  break
  ;;
 esac
