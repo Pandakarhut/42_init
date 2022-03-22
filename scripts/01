@@ -3,4 +3,4 @@
 # The file given is /etc/passwd.
 # After cutting the three specific parts, we use sed to replace the ":" characters with " " space characters.
 # Then whatever sed gives out, we finally put to nice columns using "column -t" command that takes sed output as an input.
-cut -f1,3,6 -d: /etc/passwd | sed "s/:/ /g" | column -t
+cut -f1,3,7 -d: /etc/passwd | sed "s/:/ /g" | column -t
